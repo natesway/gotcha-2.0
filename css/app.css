@@ -1,0 +1,619 @@
+body
+{
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 0px 0px 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+*
+{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input
+{
+-webkit-user-select: auto !important;
+-khtml-user-select: auto !important;
+-moz-user-select: auto !important;
+-ms-user-select: auto !important;
+user-select: auto !important;
+}
+
+h1
+{
+	font-size: 150%;
+	margin-right: 120px;
+}
+
+p
+{
+	font-size: 110%;
+}
+
+#message
+{
+	font-weight: bold;
+}
+
+.evo-image
+{
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 100px;
+	height: auto;
+	background: white;
+}
+
+button
+{
+	padding: 10px;
+	background: rgb(240,240,240);
+	border: 1px solid rgb(30,30,30);
+	border-radius: 10px;
+	font-size: 115%;
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    -webkit-transition: left 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: left 0.5s;
+}
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.percentageBarOuter
+{
+	display: none;
+	top: 88%;
+    height: 2%;
+    width: 90%;
+    border-color: #000000;
+    background-color: #005500;
+    position: fixed;
+    left: 5%;
+    border-radius: 25px;
+}
+.percentageBar
+{
+	display: block;
+    height: 100%;
+    width: 0%;
+    border-color: #00ffff;
+    background-color: #00bb00;
+    left: 5%;
+    border-radius: 25px;
+}
+
+.connectButton
+{
+	position: relative;
+	left: 25%;
+    background-color: #4CAF50;
+    border-color: #000000;
+    /*border-padding: 1%;*/
+    border: none;
+    color: white;
+    padding: 1% 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 25px;
+	outline: 0;
+	display: none;
+}
+.buttonFrame
+{
+	position: fixed;
+	width: 100%;
+	top: 16%;
+}
+
+.buttons
+{
+	position: fixed;
+	left: 10%;
+	right: auto;
+    border-radius: 5px;
+	border: 2px solid;
+	width: 80%;
+	text-align: left;
+	line-height: 7vw;
+	text-indent: 5%;
+	font-size: 5vw;
+	margin-top: 4%;
+	margin-bottom: 4%;
+}
+.buttonsPosition
+{
+	left: -%;
+}
+.buttonsPositionA
+{
+	left: -%;
+}
+.button1
+{
+	position: relative;
+	transition: color 0.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	/* background-color: rgba(255,255,255,0.498039); */
+	/* border-color: lightgrey; */
+}
+.button2
+{
+	position: relative;
+	transition: color 0.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	/* background-color: rgba(255,255,255,0.498039); */
+	/* border-color: lightgrey; */
+}
+.button3
+{
+	position: relative;
+	transition: color 0.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	/* background-color: rgba(255,255,255,0.498039); */
+	/* border-color: lightgrey; */
+}
+.button4
+{
+	position: relative;
+	transition: color 0.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	/* background-color: rgba(255,255,255,0.498039); */
+	/* border-color: lightgrey; */
+}
+.buttonEraseYes
+{
+	position: relative;
+	top: 25%;
+	transition: color 0.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	background-color: rgba(255,0,0,1);
+	text-align: center;
+}
+.buttonEraseNo
+{
+	position: relative;
+	top: 25%;
+	transition: color 0.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	/*background-color: rgba(255,255,255,0.498039);*/
+	background-color: rgba(0,255,0,1);
+	text-align: center;
+}
+.buttonsFrame
+{
+	position: absolute;
+	top: 5%;
+	left: 79%;
+	width: 20%;
+	height: 85%;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: thin;
+	transition: background-color 0.30s ease;
+}
+.buttonsSlider
+{
+	position: absolute;
+	background-color: #ffffff;
+	top: 5%;
+	left: 10%;
+	width: 33%;
+	height: 90%;
+	border-radius: 100%;
+	transition: left 0.25s ease;
+}
+
+
+#wrapperStatus
+{
+	transition: left 1s ease,opacity 0.5s ease;
+	position:fixed;
+	top: 9.75%;
+	left: 0%;
+	width: 100%;
+	height: 400px;
+	animation: dash 5s linear forwards;
+}
+#wrapper
+{
+	position:fixed;
+	top: 20%;
+	width: 100%;
+	height: 400px;
+}
+.firstPage{left: 0%;}
+.notFirstPage{left: 100%;}
+#wrapper0
+{
+	position:fixed;
+	top: 20%;
+	width: 100%;
+	height: 400px;
+}
+#wrapper1
+{
+	position:fixed;
+	top: 20%;
+	width: 100%;
+	height: 400px;
+}
+#wrapper2
+{
+	position:fixed;
+	top: 20%;
+	width: 100%;
+	height: 400px;
+}
+#wrapper3
+{
+	position:fixed;
+	top: 20%;
+	width: 100%;
+	height: 400px;
+}
+
+.fromLeft
+{
+	animation: fromLeft 0.5s linear forwards;
+}
+@keyframes fromLeft
+{
+	0%{left: -100%;opacity: 0;}
+	50%{opacity: 0;}
+	100%{left: 0%;opacity: 1;}
+}
+.toLeft
+{
+	animation: toLeft 0.5s linear forwards;
+}
+@keyframes toLeft
+{
+	0%{left: 0%;}
+	50%{opacity: 0;}
+	100%{left: -100%;opacity: 0;}
+}
+
+.fromRight
+{
+	animation: fromRight 0.5s linear forwards;
+}
+@keyframes fromRight
+{
+	0%{left: 100%;opacity: 0;}
+	50%{opacity: 0;}
+	100%{left: 0%;opacity: 1;}
+}
+.toRight
+{
+	animation: toRight 0.5s linear forwards;
+}
+@keyframes toRight
+{
+	0%{left: 0%;}
+	50%{opacity: 0;}
+	100%{left: 100%;opacity: 0;}
+}
+
+#meter
+{
+	width: 100%;
+	height: 100%;
+	transform: rotate(90deg);
+	animation: dash 5s linear forwards;
+}
+#middleButton
+{
+
+}
+#buttonPokemon
+{
+	transition: stroke-dashoffset 2s ease;
+}
+.spin
+{
+	transition: stroke-dashoffset 2s ease;
+}
+.spinSlow
+{
+	transition: stroke-dashoffset 2s ease;
+	transition-delay: 1s
+}
+.spinspin
+{
+	transition: stroke-dashoffset 2s ease;
+	transform: rotate(360deg);
+	transform-origin: 50% 50%;
+	animation: rotating 1.5s linear infinite;
+}
+@keyframes rotating
+{
+	0%
+	{
+		transform: rotate(0deg);
+		stroke-dasharray: 80
+	}
+	50%
+	{
+		stroke-dasharray: 80
+	}
+	100%
+	{
+		transform: rotate(360deg);
+		stroke-dasharray: 80
+	}
+}
+
+.spinspin1
+{
+	transition: stroke-dashoffset 2s ease;
+	transform: rotate(360deg);
+	transform-origin: 50% 50%;
+	animation: rotating1 8s linear infinite;
+}
+@keyframes rotating1
+{
+	0%
+	{
+		transform: rotate(0deg);
+		stroke-dasharray: 54
+	}
+	50%
+	{
+		stroke-dasharray: 54
+	}
+	100%
+	{
+		transform: rotate(360deg);
+		stroke-dasharray: 54
+	}
+}
+
+.spinspin2
+{
+	transition: stroke-dashoffset 2s ease;
+	transform: rotate(360deg);
+	transform-origin: 50% 50%;
+	animation: rotating2 2s linear infinite;
+}
+@keyframes rotating2
+{
+	0%
+	{
+		transform: rotate(0deg);
+		stroke-dasharray: 20
+	}
+	50%
+	{
+		stroke-dasharray: 20
+	}
+	100%
+	{
+		transform: rotate(360deg);
+		stroke-dasharray: 20
+	}
+}
+.spinDelay
+{
+	transition: stroke-dashoffset 2s ease, stroke 2s ease, opacity 2s ease;
+}
+.spinspin3
+{
+	transition: stroke-dashoffset 2s ease, stroke 2s ease, opacity 2s ease;
+	transform-origin: 50% 50%;
+	animation: rotating3 4s linear infinite;
+	stroke-linecap: round;
+	stroke-dasharray: 628;
+}
+@keyframes rotating3
+{
+	0%
+	{
+		transform: rotate(0deg);
+		stroke-dashoffset: 0;
+	}
+	50%
+	{
+		transform: rotate(720deg);
+		stroke-dashoffset: 628;
+	}
+	100%
+	{
+		transform: rotate(1080deg);
+		stroke-dashoffset: 0;
+	}
+}
+.eraseButton
+{
+	background-color: red;
+}
+
+
+
+.pages
+{
+	position: absolute;
+	top: 0px;
+	height: 95%;
+	width: 100%;
+	/*background-color: #0055ff;*/
+	/*opacity: 0.5;*/
+}
+.statusPage
+{
+	left: 0%;
+	opacity: 0.0;
+	display: block;
+	z-index: 0;
+}
+.infoPage
+{
+	left: 0%;
+	opacity: 0.0;
+	display: block;
+	z-index: 0;
+}
+.settingsPage
+{
+	left: 0%;
+	opacity: 0.0;
+	display: block;
+	z-index: 0;
+}
+.chartsPage
+{
+	left: 0%;
+	height: 90%;
+	opacity: 0.0;
+	display: block;
+	z-index: 0;
+}
+.erasePage
+{
+	left: 0%;
+	opacity: 0.0;
+	display: block;
+	z-index: 0;
+}
+
+
+.infoPageText
+{
+	margin: 2em;
+	color: red;
+}
+.infoPageTextColour
+{
+	/*color: black;*/
+}
+.infoPageStyle
+{
+	position: absolute;
+	top: 16%;
+	width:100%;
+	color: black;
+}
+
+
+
+.erasePageFrame
+{
+	position: fixed;
+	top: 30%;
+	left: 15%;
+	width: 70%;
+	/* height: 25%; */
+	border-style: solid;
+	border-radius: 10px;
+	padding-top: 5%;
+	text-align: center;
+	border-color: white;
+	opacity: 0.9;
+	color: white;
+}
+
+
+
+/* Main page logo and background - START*/
+.logo img
+{
+	display:block;
+	position: absolute;;
+	width: 60%;
+	left: 20%;
+	top: 5%;
+	background-size:contain;
+	z-index: 1;
+	transition: opacity 0.5s ease;
+	opacity: 1.0;
+}
+.logoDark img
+{
+	display:block;
+	position: absolute;;
+	width: 60%;
+	left: 20%;
+	top: 5%;
+	background-size:contain;
+	z-index: 1;
+	transition: opacity 0.5s ease;
+	opacity: 0.0;
+}
+#backgroundDark img
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+#backgroundLight img
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+.backgroundDark
+{
+	transition: opacity 0.5s ease;
+	display: block;
+	opacity: 0.0;
+}
+/* Main page logo and background - END*/
+
+.selectionBar
+{
+	transition: filter 0.4s, color 0.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	background-color: transparent;
+	position: absolute;
+	width:100%;
+	top: 93%;
+	height: 7%;
+	text-align: center;
+	align-items: center;
+}
+.selectionBarIcons
+{
+	transition: color 10.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	position: relative;
+	top: 5%;
+	width: 30%;
+}
+.selectionBarNotConnectedIcons
+{
+	transition: color 10.4s, left 0.4s linear 0.4s, background-color 0.25s ease;
+	position: relative;
+	top: 5%;
+	width: 15%;
+}
+#chartsOverlay
+{
+	position:fixed;
+	top: 20%;
+	width: 100%;
+	height: 400px;
+	background-color: transparent;
+	left: 0%;
+	display: block;
+}

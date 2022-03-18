@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>Go-tcha</title>
+
+	<script>
+	// Redirect console.log when running from Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+
+	<style>
+	@import "css/app.css";
+	@import "css/slider.css";
+	</style>
+</head>
+
+
+<body background="img/Background.jpg" ondragstart="return false" onselectstart="return false">
+
+<script src="js/funcs.js"></script>
+<!-- <script src="js/gotcha.js"></script> -->
+<script src="js/gotcha-connect.js"></script>
+<script src="js/gotcha-programming.js"></script>
+<script src="js/gotcha-readwrite.js"></script>
+<script src="js/app.js"></script>
+<script src="cordova.js"></script>
+<script type="text/javascript" src="mobileui/mobileui.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/selection.js"></script>
+<script src="js/info.js"></script>
+<script src="js/payload.js"></script>
+<!-- <script type="text/javascript" src="js/SocialSharing.js"></script> -->
+
+<script language=JavaScript> var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){  return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("return false") </script>
+
+<div id="logo" class="logo">
+    <img id="logoImage" src="img/Gotcha Logo.png">
+</div>
+<div id="backgroundLight">
+    <img id="backgroundLightImage" style="display: block;" src="img/Background.jpg">
+</div>
+<div id="backgroundDark">
+    <img id="backgroundDarkImage" class="backgroundDark" src="img/Dark Background.jpg">
+</div>
+<div id="logo" class="logoDark">
+    <img id="logoDarkImage" src="img/Dark Gotcha Logo.png">
+</div>
+
+<div style="padding:20px; display: none;">
+	<button onclick="on()">Settings</button>
+</div>
+	<div style="position: fixed; top: 75%; width: 100%; height: 10%;">
+	</div>
+
+<div id="status">
+
+	<div style="position: fixed; top: 80%; width: 100%; height: 10%;">
+		<!-- <button id="connect" class="connectButton">Connect</button> -->
+		<!-- <button id="disconnect" class="connectButton">Disconnect</button>
+		<button id="upgrade" class="connectButton">Upgrade</button> -->
+	</div>
+
+
+</div>
+<div id="version2">
+	<div id="main">
+		<div id="percentageBarOuter" class="percentageBarOuter">
+			<div id="percentageBar" class="percentageBar"></div>
+		</div>
+		<div style="position: fixed; top: 80%; width: 100%;">
+			<p id="message" style="color: #ffffff; text-align: center;"></p>
+		</div>
+		<!-- <div style="position: fixed; top: 75%; width: 100%; color: #000000;">
+			<p id="versionDownloaded" style="text-align: center; margin-left: 0px; margin-top: 0px;"></p>
+		</div> -->
+	</div>
+
+</div>
+
+<div id="statusPage" class="pages statusPage" style="height: 90%;">
+	<div id="wrapperStatus">
+	  <svg id="meter">
+
+	    <circle id="outerRingSync1" class="spinspin3" style="display: block" r="100" cx="50%" cy="50%" stroke="#ffff00"
+		stroke-width="24" fill="none" stroke-dasharray="628" stroke-dashoffset="0"></circle>
+
+	    <circle id="outerRingSync" class="spinspin2" style="display: block; opacity: 0;" r="100" cx="50%" cy="50%" stroke="#ffff00"
+		stroke-width="8" fill="none" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+
+
+		<circle id="innerRingPokemonBackground" class="spinDelay" style="display: block; opacity: 0;" r="90" cx="50%" cy="50%" stroke="#333333" stroke-opacity="0.5"
+		stroke-width="24" fill="none" stroke-dasharray="565, 565"></circle>
+
+		<circle id="innerErase" class="spin spinDelay" style="display: block; opacity: 0;" r="90" cx="50%" cy="50%" stroke="#33ff00" stroke-opacity="1.0"
+		stroke-width="20" fill="none" stroke-dasharray="565" stroke-dashoffset="565"></circle>
+
+
+		<circle id="outerRingPokemonBackground" class="spinDelay" style="display: block; opacity: 0;" r="120" cx="50%" cy="50%" stroke="#333333" stroke-opacity="0.5"
+		stroke-width="24" fill="none" stroke-dasharray="754, 754"></circle>
+
+		<circle id="outerProgramming" class="spin spinDelay" style="display: block; opacity: 0;" r="120" cx="50%" cy="50%" stroke="#33ff00" stroke-opacity="1.0"
+		stroke-width="20" fill="none" stroke-dasharray="754" stroke-dashoffset="754"></circle>
+
+        <!-- <circle id="reConnectButton" style="display: none;" filter="url(#this_image)" cx="50%" cy="50%" r="70" onclick="findPokemonGOPlus()"></circle> -->
+
+
+	  </svg>
+
+	</div>
+
+</div>
+
+
+
+<div id="infoPage" class="pages infoPage">
+	<div class="infoPageStyle">
+
+		<div style="text-align: center">
+			<marker id="versionMarker" style="color: black;"></marker>
+		</div>
+
+		<ul >
+			<li class="infoPageText"><p class="infoPageTextColour" style="color: black;">Insert Gotcha into the charger cable.</p></li>
+
+			<li class="infoPageText"><p class="infoPageTextColour" style="color: black;">Press the Go-tcha button and confirm charging.</p></li>
+
+			<li class="infoPageText"><p class="infoPageTextColour" style="color: black;">Connect using this app.</p></li>
+
+			<li class="infoPageText"><p class="infoPageTextColour" style="color: black;">To leave upgrade mode either suspend or close Gotcha app.</p></li>
+
+			<li class="infoPageText"><p class="infoPageTextColour" style="color: black;">If Go-tcha is not detected, Close any other apps that are using the device.</p></li>
+		</ul>
+	</div>
+</div>
+
+
+<div id="settingsPage" class="pages settingsPage">
+	<!-- <div class="buttons button1" onclick="toggleButtons()">TESTER</div> -->
+	<div id="buttonFrame" class="buttonFrame">
+		<div id="unknownButton" class="buttons buttonsPosition button1" onclick="toggleButton('unknown')">Auto Capture Unknown
+			<div id="unknownButtonFrame" class="buttonsFrame">
+				<div id="unknownButtonSlider" class="buttonsSlider"></div>
+			</div>
+		</div>
+		<div id="knownButton" class="buttons buttonsPosition button1" onclick="toggleButton('known')">Auto Capture Known
+			<div id="knownButtonFrame" class="buttonsFrame">
+				<div id="knownButtonSlider" class="buttonsSlider"></div>
+			</div>
+		</div>
+		<div id="stopsButton" class="buttons buttonsPosition button3" onclick="toggleButton('stops')">Auto Collect Stops
+			<div id="stopsButtonFrame" class="buttonsFrame">
+				<div id="stopsButtonSlider" class="buttonsSlider"></div>
+			</div>
+		</div>
+		<div id="vibrateButton" class="buttons buttonsPosition button1" onclick="toggleButton('vibrate')">Vibrate
+			<div id="vibrateButtonFrame" class="buttonsFrame">
+				<div id="vibrateButtonSlider" class="buttonsSlider"></div>
+			</div>
+		</div>
+		<div id="animationsButton" class="buttons buttonsPosition button1" onclick="toggleButton('animations')">Disable Animations
+			<div id="animationsButtonFrame" class="buttonsFrame">
+				<div id="animationsButtonSlider" class="buttonsSlider"></div>
+			</div>
+		</div>
+		<div id="darkthemeButton" class="buttons buttonsPosition button1" onclick="toggleButton('darktheme')">Dark Theme
+			<div id="darkthemeButtonFrame" class="buttonsFrame">
+				<div id="darkthemeButtonSlider" class="buttonsSlider"></div>
+			</div>
+		</div>
+		<!-- <div id="communityButton" class="buttons buttonsPosition button1" onclick="toggleButton('community')">Community Compare
+			<div id="communityButtonFrame" class="buttonsFrame">
+				<div id="communityButtonSlider" class="buttonsSlider"></div>
+			</div>
+		</div> -->
+		<div id="eraseButton" class="buttons buttonsPosition button1 eraseButton" onclick="eraseButton()">Erase Stats
+			<!-- <div id="eraseButtonFrame" class="buttonsFrame">
+				<div id="buttonSlider7" class="buttonsSlider"></div>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+<div id="chartsPage" class="pages chartsPage" style="height: 90%; opacity: 1">
+	<div class="swiper-container" style="height: 100%">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<svg id="meter">
+    				<circle id="outerRingUnknownPokemonBackground" r="100" cx="50%" cy="50%" stroke="#333333" stroke-opacity="0.5"
+    				stroke-width="24" fill="none" stroke-dasharray="628, 628"></circle>
+
+    				<circle id="outerRingUnknownPokemonMissed" class="spinSlow" r="100" cx="50%" cy="50%" stroke="#ba4b38" stroke-opacity="1.0"
+    				stroke-width="20" fill="none" stroke-dasharray="628" stroke-dashoffset="628"></circle>
+
+    				<circle id="outerRingUnknownPokemonCaught" class="spin" r="100" cx="50%" cy="50%" stroke="#3fee4b" stroke-opacity="1.0"
+    				stroke-width="20" fill="none" stroke-dasharray="628" stroke-dashoffset="628"></circle>
+
+                    <div id="statsValuesLocalTitle" style="font-family: sans-serif; font-size: 14px; font-weight: bold; color: #ffffff; text-align: center; position: relative; display: block; top: -18%;">Known Characters</div>
+                    <div id="statsValuesLocal" style="font-family: sans-serif; font-size: 14px; font-weight: bold; color: #ffffff; text-align: center; position: relative; display: block; top: -18%;">???/???</div>
+				</svg>
+			</div>
+
+			<div class="swiper-slide">
+				<svg id="meter">
+    				<circle id="outerRingKnownPokemonBackground" r="100" cx="50%" cy="50%" stroke="#333333" stroke-opacity="0.5"
+    				stroke-width="24" fill="none" stroke-dasharray="628, 628"></circle>
+
+    				<circle id="outerRingKnownPokemonMissed" class="spinSlow" r="100" cx="50%" cy="50%" stroke="#0000ff" stroke-opacity="1.0"
+    				stroke-width="20" fill="none" stroke-dasharray="628" stroke-dashoffset="628"></circle>
+
+    				<circle id="outerRingKnownPokemonCaught" class="spin" r="100" cx="50%" cy="50%" stroke="#6666ff" stroke-opacity="1.0"
+    				stroke-width="20" fill="none" stroke-dasharray="628" stroke-dashoffset="628"></circle>
+                    <div id="statsValuesWorldTitle" style="font-family: sans-serif; font-size: 14px; font-weight: bold; color: #ffffff; text-align: center; position: relative; display: block; top: -18%;">Unknown Characters</div>
+                    <div id="statsValuesWorld" style="font-family: sans-serif; font-size: 14px; font-weight: bold; color: #ffffff; text-align: center; position: relative; display: block; top: -18%;">???/???</div>
+				</svg>
+			</div>
+		</div>
+		<div class="swiper-pagination swiper-pagination-white"></div>
+	</div>
+</div>
+
+<div id="erasePage" class="pages erasePage" style="display: none;">
+	<div id="erasePageFrame" class="erasePageFrame">
+		Are you sure you wish to erase the stats
+		<div id="buttonEraseYes" class="buttons buttonEraseYes" onclick="doStatsErase()">YES</div>
+		<div id="buttonEraseNo" class="buttons buttonEraseNo" onclick="cancelStatsErase()">NO!</div>
+	</div>
+</div>
+
+<div id="selectionBarBackground" style="background-color: #92CA24; opacity: 0.4; position: absolute; width:100%; top: 93%; height: 7%; color: #ffffff; text-align: center; align-items: center;">
+</div>
+
+<div id="selectionBar" class="selectionBar" style="display: none;">
+	<div style="width:25%; height: 100%; float: left" onclick="displayPage('statusPage')">
+		<img src="img/Icon_Sync.svg" class="selectionBarIcons"/>
+	</div>
+	<div style="width:25%; height: 100%; float: left" onclick="displayPage('infoPage')">
+		<img src="img/Icon_Infoc.svg" class="selectionBarIcons"/>
+	</div>
+	<div style="width:25%; height: 100%; float: left" onclick="displayPage('settingsPage')">
+		<img src="img/Icon_Settings.svg" class="selectionBarIcons"/>
+	</div>
+	<div style="width:25%; height: 100%; float: left" onclick="displayPage('chartsPage')">
+		<img src="img/Icon_Stats.svg" class="selectionBarIcons"/>
+	</div>
+</div>
+
+<div id="selectionBarNotConnected" class="selectionBar" style="display: block;">
+	<div style="width:50%; height: 100%; float: left" onclick="displayPage('statusPage')">
+		<img src="img/Icon_Sync.svg" class="selectionBarNotConnectedIcons"/>
+	</div>
+	<div style="width:50%; height: 100%; float: left" onclick="displayPage('infoPage')">
+		<img src="img/Icon_Infoc.svg" class="selectionBarNotConnectedIcons"/>
+	</div>
+</div>
+
+<script>
+    showMessage("Preparing...");
+	displayPage('statusPage');
+	initStats();
+	new Swiper('.swiper-container', {slidesPerView: 1, pagination: '.swiper-pagination', paginationClickable: true});
+    updateFirmwareDisplay();
+</script>
+
+</body>
+
+</html>

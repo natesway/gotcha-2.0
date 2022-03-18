@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="36" viewBox="0 0 27 36">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #9b9b9b;
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="0.75" y="0" width="25.5" height="34.5" filterUnits="userSpaceOnUse">
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="2" y="3" width="21" height="14" filterUnits="userSpaceOnUse">
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Stats" class="cls-1" d="M6.75,18H9a0.75,0.75,0,0,1,.75.75v15A0.75,0.75,0,0,1,9,34.5H6.75A0.75,0.75,0,0,1,6,33.75v-15A0.75,0.75,0,0,1,6.75,18ZM12,23.25h2.25A0.75,0.75,0,0,1,15,24v9.75a0.75,0.75,0,0,1-.75.75H12a0.75,0.75,0,0,1-.75-0.75V24A0.75,0.75,0,0,1,12,23.25Zm5.25-7.5H19.5a0.75,0.75,0,0,1,.75.75V33.75a0.75,0.75,0,0,1-.75.75H17.25a0.75,0.75,0,0,1-.75-0.75V16.5A0.75,0.75,0,0,1,17.25,15.75ZM1.5,26.25H3.75A0.75,0.75,0,0,1,4.5,27v6.75a0.75,0.75,0,0,1-.75.75H1.5a0.75,0.75,0,0,1-.75-0.75V27A0.75,0.75,0,0,1,1.5,26.25ZM22.5,9h2.25a0.75,0.75,0,0,1,.75.75v24a0.75,0.75,0,0,1-.75.75H22.5a0.75,0.75,0,0,1-.75-0.75v-24A0.75,0.75,0,0,1,22.5,9Zm3.763-9L24.274,6,20.263,1.992Z"/>
+  <path id="Stats-2" data-name="Stats" class="cls-2" d="M22,3L12,13,8,9,2,15l1,2,5-5,4,4L23,5Z"/>
+</svg>
